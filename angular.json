@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "k-button": {
+      "projectType": "library",
+      "root": "projects/k-button",
+      "sourceRoot": "projects/k-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/k-button/tsconfig.lib.json",
+            "project": "projects/k-button/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/k-button/src/test.ts",
+            "tsConfig": "projects/k-button/tsconfig.spec.json",
+            "karmaConfig": "projects/k-button/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/k-button/tsconfig.lib.json",
+              "projects/k-button/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "casb-button": {
+      "projectType": "library",
+      "root": "projects/casb-button",
+      "sourceRoot": "projects/casb-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/casb-button/tsconfig.lib.json",
+            "project": "projects/casb-button/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/casb-button/src/test.ts",
+            "tsConfig": "projects/casb-button/tsconfig.spec.json",
+            "karmaConfig": "projects/casb-button/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/casb-button/tsconfig.lib.json",
+              "projects/casb-button/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "k-button"
+}
