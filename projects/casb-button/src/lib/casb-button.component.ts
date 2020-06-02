@@ -24,7 +24,7 @@ export class CasbButtonComponent implements OnInit {
   }
 
   go() {
-    window.location.href = this.url;
+    window.open(this.url, '_blank');
   }
 
 }
